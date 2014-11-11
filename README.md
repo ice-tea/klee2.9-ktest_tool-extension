@@ -9,8 +9,8 @@ and Cristian Cadar suggested
 >to output data in the desired format.<br />
 
 # My implementation <br >
-In this project, I just Modified the *getSymbolicSolution* function in the file _Executor.cpp_<br />
-which is called by function *KleeHandler::processTestCase* in the file _main.cpp_<br />
+In this project, I just Modified the **getSymbolicSolution** function in the file __Executor.cpp__<br />
+which is called by function **KleeHandler::processTestCase** in the file __main.cpp__<br />
 
 By some implementation codes into klee 2.9 version (mainly modified Executor.cpp) to<br />
 extent the test-tool's function such as print out the specific layout message of aggregate type.<br />
@@ -46,5 +46,5 @@ and the out put messages are follows:
 </code></pre>
 in which a is an array with length 2, and the element type is a struct with two int fields.<br />
 My implementation code can be seen from: <br />
-+[https://github.com/ice-tea/klee2.9-ktest_tool-extension]
-+[https://bitbucket.org/ice_tea/klee2.9-ktest_tool-extension]
++[https://github.com/ice-tea/klee2.9-ktest_tool-extension] <br />
++[https://bitbucket.org/ice_tea/klee2.9-ktest_tool-extension] <br />
