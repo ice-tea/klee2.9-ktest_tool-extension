@@ -1,28 +1,28 @@
 klee2.9-ktest_tool-extension
 ============================
-Problem description:
-as Mark R. Tuttle said, there is no effective and elegant way to 
-print out the complex layout messages of an aggregate type,
-from website:http://comments.gmane.org/gmane.comp.compilers.llvm.klee/1619
-and Cristian Cadar suggested the best solution would be to extend 
-the ktest-tool (a small program written in Python) to output data in the 
-desired format.
+Problem description:<br />
+as Mark R. Tuttle said, there is no effective and elegant way to <br />
+print out the complex layout messages of an aggregate type,<br />
+from website:http://comments.gmane.org/gmane.comp.compilers.llvm.klee/1619<br />
+and Cristian Cadar suggested the best solution would be to extend <br />
+the ktest-tool (a small program written in Python) to output data in the <br />
+desired format.<br />
 
-In this project, I just Modified the getSymbolicSolution function in the file Executor.cpp
-which is called by function KleeHandler::processTestCase in the file main.cpp.
+In this project, I just Modified the getSymbolicSolution function in the file Executor.cpp<br />
+which is called by function KleeHandler::processTestCase in the file main.cpp.<br />
 
-By some implementation codes into klee 2.9 version (mainly modified Executor.cpp) to
-extent the test-tool's function such as print out the specific layout message of aggregate type.
+By some implementation codes into klee 2.9 version (mainly modified Executor.cpp) to<br />
+extent the test-tool's function such as print out the specific layout message of aggregate type.<br />
 
-Here is an example:
-source coe to be tested:
-  typedef struct s{
-    int a;
-    int b;
-  }ss;
-  ss a[2];
-  klee_make_symbolic(&a, sizeof(a), "a”);
-
+Here is an example:<br />
+source coe to be tested:<br />
+  typedef struct s{<br />
+    int a;<br />
+    int b;<br />
+  }ss;<br />
+  ss a[2];<br />
+  klee_make_symbolic(&a, sizeof(a), "a”);<br />
+<br />
 and the out put messages are follows:
   ktest file : 'test000001.ktest'
   args       : ['two_input.o']
