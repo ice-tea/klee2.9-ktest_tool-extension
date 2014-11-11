@@ -16,7 +16,7 @@ extent the test-tool's function such as print out the specific layout message of
 
 Here is an example:
 
->>source coe to be tested:
+--source coe to be tested:
 typedef struct s{
 int a;
 int b;
@@ -24,7 +24,7 @@ int b;
 ss a[2];
 klee_make_symbolic(&a, sizeof(a), "a”);
 
->>and the out put messages are follows:
+--and the out put messages are follows:
 ktest file : 'test000001.ktest'
 args       : ['two_input.o']
 num objects: 4
